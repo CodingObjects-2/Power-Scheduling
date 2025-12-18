@@ -1,0 +1,145 @@
+
+ /* Container for the whole widget */
+ .alerts-container {
+     border: 1px solid #ccc;
+     /* Light gray border around the whole block */
+     padding: 15px;
+     background-color: #fff;
+     max-width: 450px;
+     /* Adjust as needed */
+     font-family: Arial, sans-serif;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     /* Subtle shadow for depth */
+ }
+
+ /* Heading style */
+ .alerts-container h2 {
+     font-size: 1.2em;
+     font-weight: bold;
+     color: #333;
+     padding-bottom: 10px;
+     margin-top: 0;
+     margin-bottom: 0;
+     border-bottom: 1px solid #eee;
+ }
+
+ /* Wrapper to handle the vertical scrollbar */
+ .table-scroll-wrapper {
+     max-height: 390px;
+     /* Set a max height for scrolling */
+     overflow-y: auto;
+     /* Enable vertical scrolling */
+ }
+
+ /* Base table styling */
+ .alerts-table {
+     width: 100%;
+     border-collapse: collapse;
+     /* Ensure borders merge */
+ }
+
+ /* Header row styling */
+ .alerts-table thead th {
+     background-color: #f7f7f7;
+     /* Very light gray background for header */
+     color: #333;
+     font-weight: normal;
+     padding: 8px;
+     text-align: left;
+     border: 1px solid #ddd;
+     border-top: none;
+     /* Remove top border for a cleaner look */
+     position: sticky;
+     /* Keep header visible when scrolling */
+     top: 0;
+     z-index: 10;
+     /* Ensure header is above scrolling content */
+ }
+ .instant-values-panel .bg-primary-blue{
+    background-color: #4e90c6;
+ }
+
+ /* Data cell styling */
+ .alerts-table td {
+     padding: 8px;
+     text-align: left;
+     font-size: 0.9em;
+     border: 1px solid #525050;
+     /* Remove horizontal borders on the sides of cells for the clean look */
+     border-left: none;
+     border-right: none;
+ }
+
+ /* Styling for the specific 'HIGH' priority column */
+ .alerts-table tr.high-priority td:nth-child(2) {
+     background-color: #fdd;
+     /* Light pink background */
+     color: #a00;
+     /* Darker red text for HIGH priority */
+     font-weight: bold;
+     text-align: center;
+ }
+
+ /* Styling for all High Priority rows (pink background) */
+ .alerts-table tr.high-priority {
+     background-color: #fef4f4;
+     /* Very slight pink for the entire row, lighter than the Priority cell */
+ }
+
+ /* Remove the border at the top of the first row and bottom of the last row */
+ .alerts-table tbody tr:first-child td {
+     border-top: none;
+ }
+
+ .alerts-table tbody tr:last-child td {
+     border-bottom: none;
+ }
+
+
+ /* Scrollbar styling (for WebKit browsers like Chrome/Safari) to match the image's look */
+ .table-scroll-wrapper::-webkit-scrollbar {
+     width: 10px;
+ }
+
+ .table-scroll-wrapper::-webkit-scrollbar-thumb {
+     background-color: #ccc;
+     /* Light gray thumb */
+     border-radius: 5px;
+     border: 2px solid #fff;
+     /* Border to make the thumb look thinner */
+ }
+
+ .table-scroll-wrapper::-webkit-scrollbar-track {
+     background-color: #f0f0f0;
+     /* Very light track */
+ }
+
+ /* Custom styles to perfectly match the design, especially font size and spacing */
+ .panel {
+     border: 1px solid #E0E0E0;
+     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+ }
+
+ .card .value {
+     font-size: 1.75rem;
+     /* Large font size for the value */
+     font-weight: 700;
+     line-height: 1.2;
+ }
+
+ .card .label {
+     font-size: 0.75rem;
+     /* Small font size for the label */
+     opacity: 0.9;
+ }
+
+ .alert-table-container {
+     max-height: 200px;
+     /* Constrain height to match screenshot */
+     overflow-y: auto;
+ }
+
+ /* Ensure the main content has space below the fixed header (using pt-16 in HTML) */
+ .main-content {
+     /* padding-top: 1rem; - Removed this in favor of pt-16 in class list */
+ }

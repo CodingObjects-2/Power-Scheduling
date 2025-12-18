@@ -1,0 +1,482 @@
+
+ /* Base Styling for the New Alert Table (matching the image) */
+ .alerts-list-table {
+     width: 100%;
+     border-collapse: collapse;
+     font-size: 0.75rem;
+     /* Small font size as seen in the image */
+ }
+
+ .alerts-list-table thead {
+     background-color: #F7F7F7;
+     /* Light gray header */
+     color: #333;
+ }
+
+ .alerts-list-table th {
+     padding: 8px 4px;
+     /* Smaller padding */
+     text-align: left;
+     border-bottom: 1px solid #ddd;
+     font-weight: 600;
+ }
+
+ .alerts-list-table td {
+     padding: 4px;
+     /* Smallest padding for dense rows */
+     border-bottom: 1px solid #eee;
+     /* Light horizontal line */
+     color: #444;
+     vertical-align: middle;
+ }
+
+ /* High Priority Row Styling (Pink/Red) */
+ .alerts-list-table tr.high-priority-alert td {
+     background-color: #fef4f4;
+     /* Very light pink background for the row */
+ }
+
+ /* Styling for the Priority column itself to be bolder and redder */
+ .alerts-list-table tr.high-priority-alert td:nth-child(2) {
+     background-color: #FEE2E2;
+     /* Light pink/red background for cell */
+     color: #DC2626;
+     /* Text is dark red */
+     font-weight: bold;
+     text-align: center;
+ }
+
+ /* Acknowledge Button Styling */
+ .ack-button {
+     display: inline-block;
+     padding: 2px 8px;
+     background-color: #FEE2E2;
+     /* Light pink background */
+     color: #DC2626;
+     /* Red text */
+     border: 1px solid #DC2626;
+     border-radius: 4px;
+     cursor: pointer;
+     text-align: center;
+     font-size: 0.75rem;
+     font-weight: 600;
+     line-height: 1.5;
+ }
+
+ .alerts-list-table-container {
+     max-height: 400px;
+     /* Set a height to enable scrolling */
+     overflow-y: auto;
+     border: 1px solid #ccc;
+     /* Border around the scrollable area, matching the image */
+     margin-top: 10px;
+ }
+
+ /* Ensure fixed header styling */
+ .alerts-list-table thead th {
+     position: sticky;
+     top: 0;
+     z-index: 10;
+ }
+
+ /* Sorting button style */
+ .sort-button {
+     background: none;
+     border: none;
+     color: #333;
+     font-weight: 600;
+     cursor: pointer;
+     padding: 0;
+     display: inline-flex;
+     align-items: center;
+ }
+
+ /* Custom styles from original code to retain general dashboard look */
+ .panel {
+     border: 1px solid #E0E0E0;
+     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+ }
+
+ /* The blue top bar style from the image */
+ .fixed-header {
+     background-color: #0A3D62;
+     /* Primary dark color */
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ /* The sidebar-like black area on the left of the image */
+ .left-controls {
+     position: fixed;
+     top: 50%;
+     left: 0;
+     transform: translateY(-50%);
+     width: 30px;
+     background-color: #333;
+     /* Placeholder for the black strip shown on the left */
+ }
+
+ /* General layout adjustments for a white main area */
+ body {
+     background-color: #F0F0F0;
+     /* Light background outside the main container */
+ }
+
+ .main-container {
+     background-color: #fff;
+     padding-bottom: 20px;
+ }
+
+ /* ------------------------------------------------ */
+ /* CSS for the DC Submission Section (New Addition) */
+ /* ------------------------------------------------ */
+ .dc-submission-panel {
+     width: 100%;
+     /* Take up full width of the grid column */
+     background-color: #e6f0ff;
+     /* Light blue background for the panel */
+     border: 1px solid #cce0ff;
+     padding: 10px;
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: column;
+     font-family: Arial, sans-serif;
+     border-radius: 0.5rem;
+     /* Match other panels */
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+ .dc-submission-header {
+     font-size: 16px;
+     font-weight: bold;
+     color: #333;
+     padding-bottom: 5px;
+     border-bottom: 2px solid #a9b9d3;
+     text-align: center;
+     margin-bottom: 5px;
+ }
+
+ .status-label {
+     font-size: 14px;
+     font-weight: 600;
+     color: #444;
+     padding: 5px 0;
+     text-align: center;
+     margin-bottom: 5px;
+ }
+
+ .submission-list {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     overflow-y: auto;
+ }
+
+ .submission-item {
+     display: flex;
+     border-top: 1px solid #cce0ff;
+     /* Separator line on top of each item */
+     background-color: #fff;
+     cursor: pointer;
+     transition: background-color 0.2s;
+ }
+
+ .submission-item:nth-child(2) {
+     border-top: none;
+     /* Remove the top border on the first item for clean look */
+ }
+
+ .submission-item:hover {
+     background-color: #f0f8ff;
+ }
+
+ .submission-id {
+     background-color: #79a2d8;
+     /* Blue background for the ID column */
+     color: white;
+     padding: 8px 5px;
+     font-weight: bold;
+     font-size: 14px;
+     width: 30px;
+     text-align: center;
+     border-right: 1px solid #cce0ff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-shrink: 0;
+     /* Prevent ID column from shrinking */
+ }
+
+ .submission-desc {
+     padding: 8px 10px;
+     font-size: 12px;
+     color: #555;
+     flex-grow: 1;
+     display: flex;
+     /* Helps align the text vertically */
+     align-items: center;
+ }
+
+ /* ------------------------------------------------ */
+ /* End of DC Submission CSS                         */
+ /* ------------------------------------------------ */
+
+
+ /* Basic Reset and Global Styles */
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f0f0f0;
+     color: #333;
+ }
+
+ a {
+     text-decoration: none;
+     color: inherit;
+ }
+
+ /* --- Header / Top Navigation Bar --- */
+ .top-nav {
+     background-color: #003366;
+     color: white;
+     padding: 10px 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-weight: bold;
+     height: 24px;
+ }
+
+ .nav-links a {
+     color: white;
+     margin-right: 20px;
+     padding: 5px 0;
+     transition: color 0.3s;
+ }
+
+ /* --- Main Content Area (3 Columns) --- */
+ .dc-main-container {
+     display: grid;
+     /* KEY CHANGE: Adjusting the column widths for a balanced look.
+       - Left Panel (Templates): 200px fixed width
+       - Center Content: 2.5fr (Takes 2.5 times the space of the right panel)
+       - Right Panel (DC Submission): 1fr (Base unit of flexible space) */
+     grid-template-columns: 200px 2.5fr 1fr;
+     padding: 10px;
+     gap: 10px;
+     height: calc(100vh - 44px);
+     /* Fills remaining viewport height */
+ }
+
+ /* Shared Panel Styling */
+ .left-panel,
+ .center-content,
+ .right-panel {
+     padding: 15px;
+     border: 1px solid #ccc;
+     /* Allows internal content to scroll independently if content overflows */
+     overflow-y: auto;
+ }
+
+ /* Left Panel (Templates) */
+ .left-panel {
+     background-color: #ffffcc;
+     border: 1px solid #ffcc00;
+ }
+
+ .left-panel h2 {
+     font-size: 1.1em;
+     margin-top: 0;
+     border-bottom: 1px solid #ccc;
+     padding-bottom: 5px;
+ }
+
+ .templates {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .template-link {
+     color: #0066cc;
+     padding: 5px 0;
+     margin-bottom: 5px;
+ }
+
+ .template-link.selected {
+     font-weight: bold;
+     color: #000;
+     background-color: #eee;
+     border-left: 3px solid #0066cc;
+     padding-left: 5px;
+ }
+
+ /* Center Content Area */
+ .center-content {
+     background-color: white;
+     border: 1px solid #cc0000;
+     /* Red border from the image */
+ }
+
+ .center-content h2 {
+     font-size: 1.1em;
+     margin-top: 0;
+     padding-bottom: 5px;
+ }
+
+ /* Right Panel (DC Submission) */
+ .right-panel {
+     background-color: #e6f0ff;
+     border: 1px solid #3366cc;
+ }
+
+ .right-panel h2 {
+     font-size: 1.1em;
+     margin-top: 0;
+     border-bottom: 1px solid #3366cc;
+     padding-bottom: 5px;
+ }
+
+ .status {
+     background-color: #cce0ff;
+     padding: 5px;
+     font-weight: bold;
+     margin-bottom: 10px;
+     text-align: center;
+     border-radius: 3px;
+ }
+
+ /* Table Styling (DC Submission) */
+ .right-panel table {
+     width: 100%;
+     border-collapse: collapse;
+     font-size: 0.9em;
+ }
+
+ .right-panel th,
+ .right-panel td {
+     border: 1px solid #aaccff;
+     padding: 5px 3px;
+     text-align: center;
+ }
+
+ .right-panel th {
+     background-color: #aaccff;
+     color: #000;
+     font-weight: bold;
+ }
+
+ .right-panel td:first-child {
+     background-color: #f0f5ff;
+ }
+
+ .right-panel td a {
+     color: #0066cc;
+     font-weight: bold;
+ }
+
+
+
+
+
+ /* General body styling for a clean background */
+ body {
+     font-family: Arial, sans-serif;
+     margin: 20px;
+     background-color: #f4f4f4;
+ }
+
+ /* Container for the entire report */
+ .report-container {
+     width: 90%;
+     /* Adjust as needed */
+     max-width: 1200px;
+     margin: auto;
+     background-color: #fff;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     border: 1px solid #ccc;
+     /* Outer border */
+ }
+
+ /* Header styling */
+ .report-header {
+     background-color: #2c3e50;
+     /* Dark blue background */
+     color: white;
+     padding: 10px 15px;
+     font-size: 1.2em;
+     font-weight: bold;
+ }
+
+ /* Base table styling */
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     table-layout: fixed;
+     /* Ensures columns maintain width */
+ }
+
+ /* 1. Scrolling Body Container */
+ .scroll-body {
+     /* KEY FOR SCROLLING */
+     max-height: 400px;
+     /* Set the maximum height before it starts scrolling */
+     overflow-y: scroll;
+     /* Enable vertical scrolling */
+ }
+
+ /* 2. Fixed Header Container (No scrolling) */
+ .scroll-header table {
+     margin-bottom: 0;
+     /* Remove space between header and body */
+ }
+
+ /* Table header (thead) styling - Applied to the header table */
+ .scroll-header thead {
+     background-color: #ecf0f1;
+     /* Light gray/off-white background */
+     color: #333;
+ }
+
+ th,
+ td {
+     padding: 10px;
+     border: 1px solid #ddd;
+     /* Light gray border for all cells */
+     text-align: right;
+     /* Align numbers to the right */
+     font-size: 0.9em;
+ }
+
+ /* Important: Remove border on the bottom of the header and top of the body for a continuous look */
+ .scroll-header th {
+     border-bottom: none;
+ }
+
+ .scroll-body td {
+     border-top: none;
+ }
+
+
+ /* Left-align specific columns (Time and Block) */
+ td:first-child,
+ th:first-child,
+ td:nth-child(2),
+ th:nth-child(2) {
+     text-align: left;
+ }
+
+ /* Center align the header text for the long column */
+ th:nth-child(3) {
+     text-align: center;
+ }
+
+ /* Alternating row colors for better readability (Zebra striping) */
+ tbody tr:nth-child(even) {
+     background-color: #f9f9f9;
+     /* Very light gray for even rows */
+ }
+
+ /* Style for the hover effect */
+ tbody tr:hover {
+     background-color: #f0f0f0;
+ }
